@@ -77,4 +77,17 @@ public class CityList {
     public int countCities() {
         return cities.size();
     }
+
+    /**
+     * Clear the list of all cities
+     */
+    public void clear() {
+
+            if (cities.size() == 0) {
+                throw new IllegalArgumentException();
+            }
+
+            cities.removeAll(cities);
+    }
+
 }
